@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ficboard: A sleek and responsive admin dashboard for loan management, featuring a user details and overview page. Built to master CSS Grid, Flexbox, and animations with a focus on cool responsiveness, without API integration."
+    />
+    <title>Ficboard // Admin Dashboard</title>
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="script/script.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="dashboard">
+      <!-- Header of Dashboard -->
+      <header class="header">
+        <img
+          src="images/Ficboard-logo.png"
+          alt="Ficboard logo"
+          height="40"
+          class="logo"
+        />
+
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search for anything"
+          />
+          <button class="search__btn">
+            <ion-icon name="search-outline" class="search__icon"></ion-icon>
+          </button>
+        </form>
+
+        <a href="#" class="header__link">Docs</a>
+        <div class="profile">
+          <ion-icon
+            name="notifications-outline"
+            class="profile__icon"
+          ></ion-icon>
+          <img
+            src="images/man.jpg"
+            alt="A Profile Image of a man"
+            class="profile__img"
+          />
+          <span class="profile__name">Ifeanyi</span>
+          <ion-icon name="caret-down-outline" class="profile__icon"></ion-icon>
+        </div>
+        <button class="menu__btn">
+          <ion-icon name="apps-outline" class="menu__icon"></ion-icon>
+        </button>
+      </header>
+
+      <div class="dashboard__content-wrapper">
+        <!-- Sidebar of Dashboard -->
+        <aside class="sidebar">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <span class="nav__text"
+                ><ion-icon
+                  name="briefcase-outline"
+                  class="nav__icon"
+                ></ion-icon>
+                switch organization
+                <ion-icon
+                  name="chevron-down-outline"
+                  class="nav__icon"
+                ></ion-icon>
+              </span>
+            </li>
+            <li class="nav__item">
+              <a href="/index.html" class="nav__link nav__link--active"
+                ><ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                dashboard</a
+              >
+            </li>
+
+            <!-- First Sidebar Heading -->
+            <li class="nav__item">
+              <p class="nav__subheading">customers</p>
+            </li>
+            <li class="nav__item">
+              <a href="user-details.html" class="nav__link nav__link--active">
+                <ion-icon
+                  name="people-circle-outline"
+                  class="nav__icon"
+                ></ion-icon>
+                <span>users</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="people-outline" class="nav__icon"></ion-icon>
+                <span> guarantors</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="cash-outline" class="nav__icon"></ion-icon>
+                <span>loans</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="reload-circle-outline"
+                  class="nav__icon"
+                ></ion-icon>
+                <span>decision models</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="card-outline" class="nav__icon"></ion-icon>
+                <span>savings</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="wallet-outline" class="nav__icon"></ion-icon>
+                <span>loan requests</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="thumbs-up-outline" class="nav__icon"></ion-icon
+                ><span>whitelist</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="thumbs-down-outline"
+                  class="nav__icon"
+                ></ion-icon
+                ><span>karma</span></a
+              >
+            </li>
+
+            <!-- Second Sidebar Heading  -->
+            <li class="nav__item">
+              <p class="nav__subheading">businesses</p>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="briefcase-outline" class="nav__icon"></ion-icon
+                ><span>organization</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="cash-outline" class="nav__icon"></ion-icon>
+                <span>loan products</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="card-outline" class="nav__icon"></ion-icon>
+                <span>savings products</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="server-outline" class="nav__icon"></ion-icon>
+                <span>fees and charges</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="document-outline" class="nav__icon"></ion-icon>
+                <span>transactions</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="aperture-outline" class="nav__icon"></ion-icon>
+                <span>services</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="id-card-outline" class="nav__icon"></ion-icon>
+                <span>service account</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="newspaper-outline"
+                  class="nav__icon"
+                ></ion-icon>
+                <span>settlements</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="bar-chart-outline"
+                  class="nav__icon"
+                ></ion-icon>
+                <span>reports</span></a
+              >
+            </li>
+
+            <!-- Third Sidebar Heading  -->
+            <li class="nav__item">
+              <p class="nav__subheading">settings</p>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="options-outline" class="nav__icon"></ion-icon
+                ><span>preferences</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="pricetags-outline" class="nav__icon"></ion-icon
+                ><span>fees and pricing</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="git-branch-outline"
+                  class="nav__icon"
+                ></ion-icon
+                ><span>audit logs</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="chatbubble-ellipses-outline"
+                  class="nav__icon"
+                ></ion-icon
+                ><span>system messages</span></a
+              >
+            </li>
+            <hr class="bdr" />
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--logout"
+                ><ion-icon name="log-out-outline" class="nav__icon"></ion-icon
+                ><span>logout</span></a
+              >
+            </li>
+            <li class="nav__item">Copyright &copy; <span class="year"></span> by Franklin</li>
+          </ul>
+        </aside>
+        <!-- Main Content section of the Dashboard -->
+        <section class="content">
+          <header class="main-header">
+            <h1 class="heading-primary u-margin-bottom">Users</h1>
+
+            <!-- Status Grid -->
+            <div class="status u-margin-bottom">
+              <div class="status__box">
+                <ion-icon
+                  name="people-outline"
+                  class="status__icon status__icon--1"
+                ></ion-icon>
+                <p class="status__title">users</p>
+                <p class="heading-secondary">2,453</p>
+              </div>
+              <div class="status__box">
+                <ion-icon
+                  name="people-circle-outline"
+                  class="status__icon status__icon--2"
+                ></ion-icon>
+                <p class="status__title">active users</p>
+                <p class="heading-secondary">2,453</p>
+              </div>
+              <div class="status__box">
+                <ion-icon
+                  name="newspaper-outline"
+                  class="status__icon status__icon--3"
+                ></ion-icon>
+                <p class="status__title">users with loans</p>
+                <p class="heading-secondary">12,453</p>
+              </div>
+              <div class="status__box">
+                <ion-icon
+                  name="server-outline"
+                  class="status__icon status__icon--4"
+                ></ion-icon>
+                <p class="status__title">users with savings</p>
+                <p class="heading-secondary">102,453</p>
+              </div>
+            </div>
+          </header>
+
+          <!-- Table Component -->
+          <div class="table_wrapper">
+            <table class="table">
+              <!-- Table Header -->
+              <thead class="table__header">
+                <tr class="table__row">
+                  <th class="table__head-main">
+                    <div class="table__head">
+                      organization
+                      <ion-icon
+                        name="filter-outline"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+
+                    <!-- Filter / Reset Form Component -->
+                    <form action="#" class="form-filter hidden">
+                      <label for="organization" class="form-filter__label"
+                        >organization</label
+                      >
+                      <select id="organization" class="form-filter__select">
+                        <option value="">select</option>
+                        <option value="ficboard">ficboard</option>
+                        <option value="ficstar">ficstar</option>
+                      </select>
+                      <label for="username" class="form-filter__label"
+                        >username</label
+                      >
+                      <input
+                        type="text"
+                        class="form-filter__input"
+                        placeholder="user"
+                        id="username"
+                      />
+                      <label for="email" class="form-filter__label"
+                        >email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-filter__input"
+                        placeholder="email"
+                        id="email"
+                      />
+                      <label for="date" class="form-filter__label">date</label>
+                      <input
+                        type="date"
+                        class="form-filter__input"
+                        id="date"
+                        value="date"
+                      />
+                      <label for="phonenumber" class="form-filter__label"
+                        >phone number</label
+                      >
+                      <input
+                        type="text"
+                        class="form-filter__input"
+                        placeholder="phonenumber"
+                      />
+                      <label for="status" class="form-filter__label"
+                        >status</label
+                      >
+                      <select id="status" class="form-filter__select">
+                        <option value="">select</option>
+                        <option value="inactive">inactive</option>
+                        <option value="active">active</option>
+                        <option value="blacklisted">blacklisted</option>
+                        <option value="pending">pending</option>
+                      </select>
+
+                      <div class="form-filter__btn-holder">
+                        <button
+                          class="form-filter__btn form-filter__btn--reset"
+                        >
+                          reset
+                        </button>
+                        <button
+                          class="form-filter__btn form-filter__btn--filter"
+                        >
+                          filter
+                        </button>
+                      </div>
+                    </form>
+                  </th>
+                  <th>
+                    <div class="table__head">
+                      username
+                      <ion-icon
+                        name="filter-outline"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="table__head">
+                      email
+                      <ion-icon
+                        name="filter-outline"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="table__head">
+                      phone number
+                      <ion-icon
+                        name="filter-outline"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="table__head">
+                      date joined
+                      <ion-icon
+                        name="filter-outline"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="table__head">
+                      status
+                      <ion-icon
+                        name="filter-outline"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <!-- Table Body -->
+              <tbody class="table__body">
+                <tr class="table__row">
+                  <td class="table__data">ficboard</td>
+                  <td class="table__data">okonji</td>
+                  <td class="table__data">okonji@ficboard.com</td>
+                  <td class="table__data">08078903721</td>
+                  <td class="table__data">May 15, 2020 10:00 AM</td>
+                  <td class="table__data">
+                    <div>
+                      <span class="table__data-status table__data-status--1"
+                        >inactive</span
+                      >
+                      <ion-icon
+                        name="ellipsis-vertical"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="table__row">
+                  <td class="table__data">calistus</td>
+                  <td class="table__data">deborah orah</td>
+                  <td class="table__data">debby@calistus.com</td>
+                  <td class="table__data">08160780928</td>
+                  <td class="table__data">Apr 30, 2020 10:00 AM</td>
+                  <td class="table__data">
+                    <div>
+                      <span class="table__data-status table__data-status--2"
+                        >pending</span
+                      >
+                      <ion-icon
+                        name="ellipsis-vertical"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="table__row">
+                  <td class="table__data">ficstar</td>
+                  <td class="table__data">grace adada</td>
+                  <td class="table__data">grace@ficstar.com</td>
+                  <td class="table__data">07060780922</td>
+                  <td class="table__data">Apr 30, 2020 10:00 AM</td>
+                  <td class="table__data">
+                    <div>
+                      <span class="table__data-status table__data-status--3"
+                        >blacklisted</span
+                      >
+                      <ion-icon
+                        name="ellipsis-vertical"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </td>
+                  <!-- More Details Link -->
+                  <td class="more-details hidden">
+                    <a href="#" class="more-details__link"
+                      ><ion-icon
+                        name="eye-outline"
+                        class="more-details__icon"
+                      ></ion-icon>
+                      view details</a
+                    >
+                    <a href="#" class="more-details__link"
+                      ><ion-icon
+                        name="person-circle-outline"
+                        class="more-details__icon"
+                      ></ion-icon>
+                      blacklist user</a
+                    >
+                    <a href="#" class="more-details__link"
+                      ><ion-icon
+                        name="person-add-outline"
+                        class="more-details__icon"
+                      ></ion-icon>
+                      activate user</a
+                    >
+                  </td>
+                </tr>
+
+                <tr class="table__row">
+                  <td class="table__data">ficboard</td>
+                  <td class="table__data">musa dokunmu</td>
+                  <td class="table__data">musa@ficboard.com</td>
+                  <td class="table__data">07003309226</td>
+                  <td class="table__data">Apr 10, 2020 10:00 AM</td>
+                  <td class="table__data">
+                    <div>
+                      <span class="table__data-status table__data-status--4"
+                        >pending</span
+                      >
+                      <ion-icon
+                        name="ellipsis-vertical"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="table__row">
+                  <td class="table__data">ficstar</td>
+                  <td class="table__data">williams okuh</td>
+                  <td class="table__data">grace@ficstar.com</td>
+                  <td class="table__data">07060780922</td>
+                  <td class="table__data">Apr 30, 2020 10:00 AM</td>
+                  <td class="table__data">
+                    <div>
+                      <span class="table__data-status table__data-status--5"
+                        >active</span
+                      >
+                      <ion-icon
+                        name="ellipsis-vertical"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="table__row">
+                  <td class="table__data">ficboard</td>
+                  <td class="table__data">tosin dokunmu</td>
+                  <td class="table__data">tosin@ficboard.com</td>
+                  <td class="table__data">08060780900</td>
+                  <td class="table__data">Apr 10, 2020 10:00 AM</td>
+                  <td class="table__data">
+                    <div>
+                      <span class="table__data-status table__data-status--5"
+                        >active</span
+                      >
+                      <ion-icon
+                        name="ellipsis-vertical"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="table__row">
+                  <td class="table__data">ficstar</td>
+                  <td class="table__data">williams okuh</td>
+                  <td class="table__data">willi@ficstar.com</td>
+                  <td class="table__data">07060780922</td>
+                  <td class="table__data">Apr 30, 2020 10:00 AM</td>
+                  <td class="table__data">
+                    <div>
+                      <span class="table__data-status table__data-status--3"
+                        >blacklisted</span
+                      >
+                      <ion-icon
+                        name="ellipsis-vertical"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="table__row">
+                  <td class="table__data">ficboard</td>
+                  <td class="table__data">chidera nosa</td>
+                  <td class="table__data">nosa12@ficboard.com</td>
+                  <td class="table__data">08060780900</td>
+                  <td class="table__data">Apr 10, 2020 10:00 AM</td>
+                  <td class="table__data">
+                    <div>
+                      <span class="table__data-status table__data-status--1"
+                        >inactive</span
+                      >
+                      <ion-icon
+                        name="ellipsis-vertical"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="table__row">
+                  <td class="table__data">ficstar</td>
+                  <td class="table__data">bodeh upabio</td>
+                  <td class="table__data">grace@ficstar.com</td>
+                  <td class="table__data">07060780922</td>
+                  <td class="table__data">Apr 30, 2020 10:00 AM</td>
+                  <td class="table__data">
+                    <div>
+                      <span class="table__data-status table__data-status--1"
+                        >inactive</span
+                      >
+                      <ion-icon
+                        name="ellipsis-vertical"
+                        class="table__icon"
+                      ></ion-icon>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination Components -->
+          <div class="pagination">
+            <!-- Left: Pagination Count  -->
+            <div class="pagination__count">
+              <span class="pagination__text">Showing</span>
+              <select name="" id="" class="pagination__page-select">
+                <option value="100">100</option>
+              </select>
+              <span class="pagination__text">out of 100</span>
+            </div>
+
+            <!-- Right: Pagination Page Links -->
+            <div class="pagination__page">
+              <button class="pagination__btn pagination__btn--left">
+                <ion-icon
+                  name="chevron-back-outline"
+                  class="pagination__icon"
+                ></ion-icon>
+              </button>
+              <a href="#" class="pagination__link pagination__link--active"
+                >1</a
+              >
+              <a href="#" class="pagination__link">2</a>
+              <a href="#" class="pagination__link">3</a>
+              <span>...</span>
+              <a href="#" class="pagination__link">15</a>
+              <a href="#" class="pagination__link">16</a>
+              <button class="pagination__btn pagination__btn--right">
+                <ion-icon
+                  name="chevron-forward-outline"
+                  class="pagination__icon"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

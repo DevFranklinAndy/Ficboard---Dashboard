@@ -1,0 +1,33 @@
+.grid {
+  display: grid;
+  column-gap: 6rem;
+  row-gap: 3rem;
+
+  @include responsive(desktop-sm) {
+    column-gap: 4.4rem;
+  }
+}
+
+.col--1-of-4 {
+  grid-template-columns: repeat(4, 1fr);
+
+  @include responsive(desktop-sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include responsive(phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.col--1-of-5 {
+  grid-template-columns: repeat(5, 1fr);
+
+  @include responsive(desktop-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include responsive(phone) {
+    grid-template-columns: 1fr;
+  }
+}

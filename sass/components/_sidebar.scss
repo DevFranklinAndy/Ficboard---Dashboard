@@ -1,0 +1,130 @@
+.sidebar {
+  width: 280px;
+  height: calc(100vh - #{$header-height});
+  background-color: $color-white;
+  padding: 2.4rem 0;
+  position: sticky;
+  top: 7rem;
+  left: 0;
+  overflow: auto;
+  z-index: 5;
+  scrollbar-width: none; // Firefox
+  transition: all 0.5s;
+
+  @include responsive(tab-land) {
+    position: fixed;
+    transform: translateX(-100%);
+  }
+}
+
+.show {
+  transform: translateX(0);
+}
+
+// Chrome, Safari, and Opera
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__item {
+    cursor: pointer;
+
+    &:last-child {
+      font-size: $min-font-size;
+      padding: 1.4rem 1.4rem 1.4rem 2.4rem;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: $color-secondary-grey;
+    text-transform: capitalize;
+    padding: 2.4rem;
+  }
+
+  &__subheading {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: $font-weight-bold;
+    padding: 1.4rem 1.4rem 1.4rem 2.4rem;
+  }
+
+  &__link {
+    &:any-link {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      text-decoration: none;
+      color: $color-secondary-grey-tint;
+      text-transform: capitalize;
+      padding: 1.4rem 1.4rem 1.4rem 2.4rem;
+      position: relative;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    &::before {
+      content: "";
+      display: table;
+      width: 150%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.5s 0.3s;
+      transform: translateX(-100%);
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      display: table;
+      background-color: $color-primary-main;
+      width: 0.5rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      transition: all 0.5s;
+      backface-visibility: hidden;
+    }
+
+    &:hover::before {
+      transform: translateX(0);
+      @include bgClr($color-primary-main);
+    }
+
+    &:hover::after {
+      transform: translateY(0);
+    }
+
+    &--active {
+      &::before {
+        transform: translateX(0);
+        @include bgClr($color-primary-main);
+      }
+      &::after {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__link--logout {
+    color: $color-secondary-grey !important;
+  }
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

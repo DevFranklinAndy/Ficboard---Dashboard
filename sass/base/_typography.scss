@@ -1,0 +1,18 @@
+.heading-primary {
+  color: $color-secondary-grey;
+  font-weight: $font-weight-bold;
+  font-size: $max-font-size;
+}
+
+.heading-secondary {
+  color: $color-secondary-grey;
+  font-weight: $font-weight-bolder;
+  font-size: $max-font-size;
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: $font-weight-bold;
+  color: $color-secondary-grey;
+  text-transform: capitalize;
+}

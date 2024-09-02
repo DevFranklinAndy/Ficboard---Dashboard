@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scrollbar-width: thin;
+
+  @include responsive(desktop-lg) {
+    font-size: 56.25%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  color: $color-primary-grey;
+}

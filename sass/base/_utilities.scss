@@ -1,0 +1,29 @@
+.u-margin-bottom {
+  margin-bottom: 3.2rem !important;
+}
+
+.u-margin-bottom-sm {
+  margin-bottom: 3rem !important;
+}
+
+.lowertxt {
+  text-transform: lowercase !important;
+}
+
+.bdr {
+  margin: 4.8rem 0 !important;
+  border: $bdr-line;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}

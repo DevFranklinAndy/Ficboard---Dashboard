@@ -1,0 +1,50 @@
+@mixin bgClr($clr) {
+  background-color: rgba($clr, 0.08);
+}
+
+@mixin shadow {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+
+// MEDIA QUERY MANAGER
+// Mobile Phone - phone.
+// Tablet Portrait - tab-port.
+// Tablet Landscape - tab-land.
+// Desktop Small - desktop-sm.
+// Desktop Large - desktop-lg.
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 31.3em) {
+      // 500.8
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 44em) {
+      // 704px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 55em) {
+      // 880px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-sm {
+    @media only screen and (max-width: 75em) {
+      // 1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-lg {
+    @media only screen and (max-width: 82em) {
+      // 1312px
+      @content;
+    }
+  }
+}

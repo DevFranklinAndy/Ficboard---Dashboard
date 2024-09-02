@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ficboard: A sleek and responsive admin dashboard for loan management, featuring a user details and overview page. Built to master CSS Grid, Flexbox, and animations with a focus on cool responsiveness, without API integration.">
+    <title>FicBoard // Admin Dashboard</title>
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="script/script.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="dashboard">
+      <!-- Header of Dashboard -->
+      <header class="header">
+        <img src="images/Ficboard-logo.png" alt="
+        Ficboard logo" height="40"/>
+
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search for anything"
+          />
+          <button class="search__btn">
+            <ion-icon name="search-outline" class="search__icon"></ion-icon>
+          </button>
+        </form>
+
+        <a href="#" class="header__link">Docs</a>
+        <div class="profile">
+          <ion-icon
+            name="notifications-outline"
+            class="profile__icon"
+          ></ion-icon>
+          <img
+            src="images/man.jpg"
+            alt="A Profile Image of a man"
+            class="profile__img"
+          />
+          <span class="profile__name">Ifeanyi</span>
+          <ion-icon name="caret-down-outline" class="profile__icon"></ion-icon>
+        </div>
+        <button class="menu__btn">
+          <ion-icon name="apps-outline" class="menu__icon"></ion-icon>
+        </button>
+      </header>
+
+      <div class="dashboard__content-wrapper">
+        <!-- Sidebar of Dashboard -->
+        <aside class="sidebar">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <span class="nav__text"
+                ><ion-icon
+                  name="briefcase-outline"
+                  class="nav__icon"
+                ></ion-icon>
+                switch organization
+                <ion-icon
+                  name="chevron-down-outline"
+                  class="nav__icon"
+                ></ion-icon>
+              </span>
+            </li>
+            <li class="nav__item">
+              <a href="index.html" class="nav__link nav__link--active"
+                ><ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                dashboard</a
+              >
+            </li>
+
+            <!-- First Sidebar Heading -->
+            <li class="nav__item">
+              <p class="nav__subheading">customers</p>
+            </li>
+            <li class="nav__item">
+              <a href="user-details.html" class="nav__link nav__link--active">
+                <ion-icon
+                  name="people-circle-outline"
+                  class="nav__icon"
+                ></ion-icon>
+                <span>users</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="people-outline" class="nav__icon"></ion-icon>
+                <span> guarantors</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="cash-outline" class="nav__icon"></ion-icon>
+                <span>loans</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="reload-circle-outline"
+                  class="nav__icon"
+                ></ion-icon>
+                <span>decision models</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="card-outline" class="nav__icon"></ion-icon>
+                <span>savings</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="wallet-outline" class="nav__icon"></ion-icon>
+                <span>loan requests</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="thumbs-up-outline" class="nav__icon"></ion-icon
+                ><span>whitelist</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="thumbs-down-outline"
+                  class="nav__icon"
+                ></ion-icon
+                ><span>karma</span></a
+              >
+            </li>
+
+            <!-- Second Sidebar Heading  -->
+            <li class="nav__item">
+              <p class="nav__subheading">businesses</p>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="briefcase-outline" class="nav__icon"></ion-icon
+                ><span>organization</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="cash-outline" class="nav__icon"></ion-icon>
+                <span>loan products</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="card-outline" class="nav__icon"></ion-icon>
+                <span>savings products</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="server-outline" class="nav__icon"></ion-icon>
+                <span>fees and charges</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="document-outline" class="nav__icon"></ion-icon>
+                <span>transactions</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="aperture-outline" class="nav__icon"></ion-icon>
+                <span>services</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="id-card-outline" class="nav__icon"></ion-icon>
+                <span>service account</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="newspaper-outline"
+                  class="nav__icon"
+                ></ion-icon>
+                <span>settlements</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="bar-chart-outline"
+                  class="nav__icon"
+                ></ion-icon>
+                <span>reports</span></a
+              >
+            </li>
+
+            <!-- Third Sidebar Heading  -->
+            <li class="nav__item">
+              <p class="nav__subheading">settings</p>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="options-outline" class="nav__icon"></ion-icon
+                ><span>preferences</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon name="pricetags-outline" class="nav__icon"></ion-icon
+                ><span>fees and pricing</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="git-branch-outline"
+                  class="nav__icon"
+                ></ion-icon
+                ><span>audit logs</span></a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link"
+                ><ion-icon
+                  name="chatbubble-ellipses-outline"
+                  class="nav__icon"
+                ></ion-icon
+                ><span>system messages</span></a
+              >
+            </li>
+            <hr class="bdr" />
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--logout"
+                ><ion-icon name="log-out-outline" class="nav__icon"></ion-icon
+                ><span>logout</span></a
+              >
+            </li>
+            <li class="nav__item"><span>v1.2.0</span></li>
+          </ul>
+        </aside>
+        <!-- Main Content section of the Dashboard -->
+        <section class="content">
+          <header class="main-header">
+            <a href="index.html" class="link u-margin-bottom"
+              ><ion-icon name="return-up-back-outline" class="icon"></ion-icon
+              ><span>Back to Users</span></a
+            >
+            <div class="content__heading u-margin-bottom">
+              <h1 class="heading-primary">User Details</h1>
+
+              <div class="content__btn-holder">
+                <button
+                  class="content__heading-btn content__heading-btn--blacklist"
+                >
+                  blacklist user
+                </button>
+                <button
+                  class="content__heading-btn content__heading-btn--activate"
+                >
+                  activate user
+                </button>
+              </div>
+            </div>
+
+            <!-- Profile Component -->
+            <div class="prof">
+              <div class="prof__bio-holder">
+                <ion-icon name="person-outline" class="prof__icon"></ion-icon>
+
+                <div class="prof__bio">
+                  <h3 class="prof__name">grace effiom</h3>
+                  <p class="prof__code">LSQFf587g90</p>
+                </div>
+
+                <div class="prof__tier">
+                  <p class="prof__title">user's tier</p>
+                  <div class="prof__rating">
+                    <ion-icon name="star" class="prof__rating-icon"></ion-icon>
+                    <ion-icon
+                      name="star-outline"
+                      class="prof__rating-icon"
+                    ></ion-icon>
+                    <ion-icon
+                      name="star-outline"
+                      class="prof__rating-icon"
+                    ></ion-icon>
+                  </div>
+                </div>
+
+                <div class="prof__wallet">
+                  <h3 class="prof__cash">₦200,000.00</h3>
+                  <p class="prof__account">
+                    <span>9912345678</span>/<span>Providus Bank</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Profile Tabs -->
+              <div class="prof__tabs">
+                <ul class="prof__list">
+                  <li class="prof__item">
+                    <a href="#" class="prof__link prof__link--active"
+                      >general details</a
+                    >
+                  </li>
+                  <li class="prof__item">
+                    <a href="#" class="prof__link">documents</a>
+                  </li>
+                  <li class="prof__item">
+                    <a href="#" class="prof__link">bank details</a>
+                  </li>
+                  <li class="prof__item">
+                    <a href="#" class="prof__link">loans</a>
+                  </li>
+                  <li class="prof__item">
+                    <a href="#" class="prof__link">savings</a>
+                  </li>
+                  <li class="prof__item">
+                    <a href="#" class="prof__link">app and system</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
+
+          <!-- Personal Information Component -->
+          <div class="personal-info">
+            <h3 class="heading-tertiary u-margin-bottom-sm">
+              personal information
+            </h3>
+
+            <div class="grid col--1-of-5">
+              <div class="personal-info__box">
+                <p class="personal-info__title">full name</p>
+                <p class="personal-info__value">grace effiom</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">phone number</p>
+                <p class="personal-info__value">07060780922</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">email address</p>
+                <p class="personal-info__value lowertxt">grace@gmail.com</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">bvn address</p>
+                <p class="personal-info__value">07060780922</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">gender</p>
+                <p class="personal-info__value">female</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">marital status</p>
+                <p class="personal-info__value">single</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">children</p>
+                <p class="personal-info__value">none</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">type of residence</p>
+                <p class="personal-info__value">parent's apartment</p>
+              </div>
+            </div>
+
+            <hr class="bdr" />
+
+            <h3 class="heading-tertiary u-margin-bottom-sm">
+              education and employment
+            </h3>
+            <div class="grid col--1-of-4">
+              <div class="personal-info__box">
+                <p class="personal-info__title">level of education</p>
+                <p class="personal-info__value">B.Sc</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">employment status</p>
+                <p class="personal-info__value">employed</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">sector of employment</p>
+                <p class="personal-info__value">FinTech</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">duration of employment</p>
+                <p class="personal-info__value">2 years</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">official email</p>
+                <p class="personal-info__value lowertxt">grace@lendsqr.com</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">monthly income</p>
+                <p class="personal-info__value">₦200,000.00 - ₦400,000.00</p>
+              </div>
+
+              <div class="personal-info__box">
+                <p class="personal-info__title">loan repayment</p>
+                <p class="personal-info__value">40,000</p>
+              </div>
+            </div>
+
+            
+            <hr class="bdr" />
+
+            <h3 class="heading-tertiary u-margin-bottom-sm">
+              socials
+            </h3>
+            <div class="grid col--1-of-5">
+              <div class="personal-info__box">
+                <p class="personal-info__title">twitter</p>
+                <p class="personal-info__value lowertxt">@grace_effiom</p>
+              </div>
+              <div class="personal-info__box">
+                <p class="personal-info__title">facebook</p>
+                <p class="personal-info__value">grace effiom</p>
+              </div>
+              <div class="personal-info__box">
+                <p class="personal-info__title">instagram</p>
+                <p class="personal-info__value lowertxt">@grace_effiom</p>
+              </div>
+          </div>
+            
+            <hr class="bdr" />
+
+            <h3 class="heading-tertiary u-margin-bottom-sm">
+              guarantors
+            </h3>
+            <div class="grid col--1-of-5">
+              <div class="personal-info__box">
+                <p class="personal-info__title">full name</p>
+                <p class="personal-info__value">debby ogana</p>
+              </div>
+              <div class="personal-info__box">
+                <p class="personal-info__title">phone number</p>
+                <p class="personal-info__value">07060780922</p>
+              </div>
+              <div class="personal-info__box">
+                <p class="personal-info__title">email address</p>
+                <p class="personal-info__value lowertxt">debby@gmail.com</p>
+              </div>
+              <div class="personal-info__box">
+                <p class="personal-info__title">relationship</p>
+                <p class="personal-info__value">sister</p>
+              </div>
+          </div>
+            
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

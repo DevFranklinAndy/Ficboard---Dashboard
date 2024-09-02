@@ -1,0 +1,21 @@
+.dashboard {
+  max-width: 153.6rem;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  overflow: auto;
+
+  &__content-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+::-webkit-scrollbar {
+  @include bgClr($color-primary-grey);
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color-primary-main;
+}

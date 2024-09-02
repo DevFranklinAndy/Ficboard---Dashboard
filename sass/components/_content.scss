@@ -1,0 +1,549 @@
+.content {
+  width: calc(100% - #{$sidebar-width});
+  background-color: $color-grey-light;
+  padding: 4.8rem;
+  transition: all 0.5s;
+
+  @include responsive(tab-land) {
+    width: 100%;
+    padding: 2.4rem;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-btn {
+      background: none;
+      border-radius: 0.8rem;
+      padding: 1.2rem 1.6rem;
+      text-transform: uppercase;
+      font-family: inherit;
+      font-weight: $font-weight-bold;
+      cursor: pointer;
+
+      &--blacklist {
+        border: 1px solid $color-accent-7;
+        color: $color-accent-7;
+        margin-right: 2rem;
+
+        @include responsive(phone) {
+          margin-right: 1rem;
+          padding: 1rem 1rem;
+        }
+      }
+
+      &--activate {
+        border: 1px solid $color-primary-main;
+        color: $color-primary-main;
+
+        @include responsive(phone) {
+          padding: 1rem 1rem;
+        }
+      }
+    }
+
+    @include responsive(phone) {
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+  }
+}
+
+.status {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.6rem;
+
+  @include responsive(desktop-sm) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+  }
+
+  @include responsive(phone) {
+    grid-template-columns: 1fr;
+  }
+
+  &__box {
+    background-color: $color-white;
+    padding: 3rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 2rem rgba($color-black, 0.08);
+  }
+
+  &__icon {
+    font-size: 2.2rem;
+    padding: 1.8rem;
+    border-radius: 50%;
+
+    &--1 {
+      color: $color-accent-1;
+      @include bgClr($color-accent-1);
+    }
+
+    &--2 {
+      color: $color-accent-2;
+      @include bgClr($color-accent-2);
+    }
+
+    &--3 {
+      color: $color-accent-3;
+      @include bgClr($color-accent-3);
+    }
+
+    &--4 {
+      color: $color-accent-4;
+      @include bgClr($color-accent-4);
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: $medium-font-size;
+    font-weight: $font-weight-bold;
+    margin: 1.2rem 0 1.4rem 0;
+  }
+}
+
+.table_wrapper {
+  padding: 3rem;
+  box-shadow: 0 0 2rem rgba($color-black, 0.08);
+  background-color: $color-white;
+  border-radius: 0.8rem;
+  margin-bottom: 3.2rem;
+
+  @include responsive(desktop-sm) {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
+
+.table_wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.table {
+  width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  border-collapse: collapse;
+
+  @include responsive(desktop-sm) {
+    width: 800px;
+  }
+
+  &__row {
+    text-align: left;
+    position: relative;
+  }
+
+  &__head-main {
+    position: relative;
+  }
+
+  &__head {
+    font-size: $min-font-size;
+    font-weight: $font-weight-bolder;
+    text-transform: uppercase;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.6rem 0 1.6rem 0;
+    cursor: pointer;
+  }
+
+  &__icon {
+    font-size: $default-font-size;
+    cursor: pointer;
+  }
+
+  &__body &__row {
+    &:not(:last-child) {
+      border-bottom: $bdr-line;
+    }
+  }
+
+  &__data {
+    &:nth-child(1),
+    &:nth-child(2) {
+      text-transform: capitalize;
+    }
+    font-size: $medium-font-size;
+    padding: 1.6rem 0 1.6rem 0;
+
+    & div {
+      display: flex;
+      align-items: center;
+    }
+
+    &-status {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      border-radius: 50px;
+      margin-right: auto;
+      text-transform: capitalize;
+
+      &--1 {
+        color: $color-primary-grey;
+        @include bgClr($color-primary-grey);
+      }
+
+      &--2 {
+        color: $color-accent-5;
+        @include bgClr($color-accent-5);
+      }
+
+      &--3 {
+        color: $color-accent-7;
+        @include bgClr($color-accent-7);
+      }
+
+      &--4 {
+        color: $color-accent-5;
+        @include bgClr($color-accent-5);
+      }
+
+      &--5 {
+        color: $color-accent-6;
+        @include bgClr($color-accent-6);
+      }
+    }
+  }
+}
+
+// form filter component
+.form-filter {
+  background-color: $color-white;
+  width: 27rem;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
+  position: absolute;
+  z-index: 1;
+  top: 5rem;
+  left: -2rem;
+  transition: all 0.4s;
+
+  &__label {
+    font-size: $medium-font-size;
+    text-transform: capitalize;
+  }
+
+  &__select,
+  &__input {
+    margin: 0.6rem 0 2rem 0;
+    height: 4rem;
+    border-radius: 3px;
+    border: $bdr-line;
+    outline: none;
+    text-transform: capitalize;
+    font-family: inherit;
+    color: inherit;
+  }
+
+  &__select {
+    padding-left: 1.6rem;
+  }
+
+  &__input {
+    padding-left: 2rem;
+  }
+
+  &__btn-holder {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.4rem;
+    margin-top: 1rem;
+  }
+
+  &__btn {
+    flex: 1;
+    border: none;
+    padding: 1.2rem 2.4rem;
+    font-family: inherit;
+    font-weight: $font-weight-bolder;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    &--reset {
+      border: 1px solid $color-secondary-grey;
+      background: none;
+      color: inherit;
+    }
+
+    &--filter {
+      background-color: $color-primary-main;
+      color: $color-white;
+    }
+  }
+}
+
+// more details component
+.more-details {
+  background-color: $color-white;
+  border-radius: 4px;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding: 2rem;
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  top: 2rem;
+  right: -4rem;
+
+  &__link {
+    &:any-link {
+      text-transform: capitalize;
+      text-decoration: none;
+      color: $color-primary-grey;
+      font-weight: $font-weight-bold;
+      font-size: $medium-font-size;
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include responsive(phone) {
+    flex-flow: column-reverse;
+    gap: 1.8rem;
+  }
+
+  // Pagination Page Counts
+  &__text {
+    font-size: $medium-font-size;
+  }
+
+  &__page-select {
+    background-color: rgba($color-secondary-grey, 0.2);
+    color: $color-secondary-grey;
+    font-weight: $font-weight-bold;
+    font-family: inherit;
+    font-size: $medium-font-size;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    margin: 0 1rem;
+  }
+
+  // Pagination Page Links
+
+  &__page {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__btn {
+    background-color: rgba($color-secondary-grey, 0.2);
+    border: none;
+    outline: none;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__icon {
+    font-size: $medium-font-size;
+    color: $color-secondary-grey;
+  }
+
+  &__link {
+    &:any-link {
+      text-decoration: none;
+      color: rgba($color-primary-grey, 0.6);
+    }
+
+    &--active {
+      &:any-link {
+        color: $color-primary-grey;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+// Users Details
+.prof {
+  background-color: $color-white;
+  padding: 3rem 3rem 0 3rem;
+  border-radius: 0.8rem;
+  @include shadow;
+
+  &__bio-holder {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &__icon {
+    font-size: 4rem;
+    padding: 3rem;
+    background-color: rgba($color-secondary-grey, 0.2);
+    border-radius: 50%;
+  }
+
+  &__bio,
+  &__tier {
+    border-right: $bdr-line;
+    padding-right: 3rem;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include responsive(tab-port) {
+    &__bio-holder {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__bio,
+    &__tier {
+      align-items: center;
+      border-right: none;
+    }
+  }
+
+  @include responsive(desktop-sm) {
+    &__bio-holder {
+      gap: 1.5rem;
+    }
+
+    &__icon {
+      font-size: 3rem;
+      padding: 2rem;
+    }
+
+    &__bio,
+    &__tier {
+      padding-right: 1.5rem;
+    }
+  }
+
+  &__name,
+  &__cash {
+    font-weight: $font-weight-bold;
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    color: $color-secondary-grey;
+    margin-bottom: 0.8rem;
+  }
+
+  &__code {
+    font-size: $medium-font-size;
+  }
+
+  &__title {
+    font-weight: $font-weight-bold;
+    font-size: $medium-font-size;
+    text-transform: capitalize;
+    margin-bottom: 0.8rem;
+  }
+
+  &__rating-icon {
+    color: $color-accent-5;
+  }
+
+  &__account {
+    color: $color-secondary-grey;
+    font-size: 1.2rem;
+  }
+
+  // Profile Tabs
+
+  &__tabs {
+    margin-top: 2rem;
+
+    @include responsive(desktop-sm) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.2rem;
+    text-align: center;
+    list-style: none;
+  }
+
+  &__item {
+    flex: 1;
+  }
+
+  &__link {
+    &:any-link {
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      text-transform: capitalize;
+    }
+
+    &::after {
+      content: "";
+      display: table;
+      margin-top: 1rem;
+      height: 4px;
+      width: 100%;
+      background-color: $color-primary-main;
+      transform: translateX(-100%);
+      transition: all 0.4s;
+    }
+
+    &:hover::after {
+      transform: translateX(0);
+    }
+
+    &--active {
+      &:any-link {
+        color: $color-primary-main;
+      }
+
+      &::after {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+// Personal Information Component
+.personal-info {
+  background-color: $color-white;
+  margin-top: 3rem;
+  padding: 3rem;
+  border-radius: 0.8rem;
+  @include shadow;
+
+  &__title {
+    font-size: $min-font-size;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  &__value {
+    text-transform: capitalize;
+    font-weight: $font-weight-bold;
+  }
+}
